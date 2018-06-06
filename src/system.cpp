@@ -15,10 +15,15 @@ void System::init()
     {
         INITERROR("al_install_mouse");
     }
+    al_set_new_display_flags(conf.displayFlags);
     disp = al_create_display(conf.dims.x, conf.dims.y);
     if (!disp)
     {
         INITERROR("al_create_display", conf.dims.toString());
+    }
+    if (!al_acknowledge_resize(disp))
+    {
+        INITERROR("al_acknowledge_resize");
     }
     evQueue = al_create_event_queue();
     if (!evQueue)
@@ -95,6 +100,12 @@ void System::runEvents()
             {
                 redraw = true;
             }
+        }
+        else if (ev.type == ALLEGRO_EVENT_DISPLAY_RESIZE)
+        {
+            al_acknowledge_resize(disp);
+            conf.dims.x = ev.display.width;
+            conf.dims.y = ev.display.height;
         }
     } while (al_get_next_event(evQueue, &ev));
 }

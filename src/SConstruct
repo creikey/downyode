@@ -42,4 +42,4 @@ if failed:
 env = conf.Finish()
 
 env.ParseConfig('pkg-config --cflags --libs ' + pkgConfigFlags + ' ' + pkgString)
-env.Program(Glob('*.cpp'), CXXFLAGS='-g')
+env.Program("main", Glob('*.cpp'), CXXFLAGS='-g')

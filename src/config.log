@@ -1,0 +1,31 @@
+file /home/creikey/Documents/projects/downyode/src/SConstruct,line 23:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking pkg-config...
+scons: Configure: ".sconf_temp/conftest_0" is up to date.
+scons: Configure: The original builder output was:
+  |pkg-config --atleast-pkgconfig-version=0.29.1
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for allegro_font-static-5 >= 5.2.4... 
+scons: Configure: ".sconf_temp/conftest_1" is up to date.
+scons: Configure: The original builder output was:
+  |pkg-config --exists 'allegro_font-static-5 >= 5.2.4'
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for allegro-static-5 >= 5.2.4... 
+scons: Configure: ".sconf_temp/conftest_2" is up to date.
+scons: Configure: The original builder output was:
+  |pkg-config --exists 'allegro-static-5 >= 5.2.4'
+  |
+scons: Configure: (cached) yes
+
+scons: Configure: Checking for allegro_primitives-static-5 >= 5.2.4... 
+scons: Configure: ".sconf_temp/conftest_3" is up to date.
+scons: Configure: The original builder output was:
+  |pkg-config --exists 'allegro_primitives-static-5 >= 5.2.4'
+  |
+scons: Configure: (cached) yes
+
+
